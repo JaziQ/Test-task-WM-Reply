@@ -43,4 +43,5 @@ public interface VisitRepository extends Repository<Visit, Integer> {
 
 	List<Visit> findByPetId(Integer petId);
 
+	Visit findById(Integer visitId);
 }
