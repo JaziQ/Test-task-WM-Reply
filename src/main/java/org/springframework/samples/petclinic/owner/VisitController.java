@@ -110,4 +110,14 @@ class VisitController {
 			return "redirect:/owners/{ownerId}";
 		}
 	}
+
+	//TODO: make post request
+	@GetMapping("/owners/{ownerId}/pets/{petId}/visits/{visitId}/changeActivity")
+	public String changeActivityVisitForm(@PathVariable("petId") int petId, @PathVariable("visitId") Integer visitId, Map<String, Object> model) {
+		Visit visit1 = visitsRepo.findById(visitId);
+		visit1.setActive(!visit1.isActive());
+		this.visitsRepo.save(visit1);
+		return "redirect:/owners/{ownerId}";
+	}
+
 }
