@@ -45,4 +45,5 @@ public interface VetRepository extends Repository<Vet, Integer> {
 
 	@Transactional(readOnly = true)
 	Vet findById(Integer vetId);
+
 }
