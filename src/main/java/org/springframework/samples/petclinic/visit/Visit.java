@@ -50,7 +50,7 @@ public class Visit extends BaseEntity {
 	private Vet vetId;
 
 	@Column(name = "is_active")
-	private boolean isActive;
+	private boolean isActive = true;
 	/**
 	 * Creates a new instance of Visit for the current date
 	 */
